@@ -11,9 +11,12 @@ const UserList = () => {
   const url = './data.json';
   const [userData, setData] = useState({ message: '', data: [] });
 
+  /*
+  // これ危険なのかも
   fetch(url)
     .then((res) => res.json())
     .then((json) => setData(json));
+  */
 
   return (
     <div>
@@ -27,8 +30,8 @@ const UserList = () => {
           </tr>
         </thead>
         <tbody>
-          {userData.data.map((user: User) => (
-            <tr key={user.id}>
+          {userData.data.map((user: User, i: number) => (
+            <tr key={i}>
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>
