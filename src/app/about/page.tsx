@@ -8,7 +8,9 @@ const About = () => {
         <li>
           <Link href="member">メンバーリスト</Link>
         </li>
-        <li></li>
+        <li>
+          <Link href="good">いいねボタン</Link>
+        </li>
         <li></li>
         <li></li>
         <li></li>
