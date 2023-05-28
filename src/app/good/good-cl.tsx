@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import styles from './good-cl.module.css';
 
 const GoodCl = () => {
   const [likes, setLikes] = useState(0);
@@ -10,7 +11,16 @@ const GoodCl = () => {
 
   return (
     <div>
-      <div>{`counter: ${likes}`}</div>
+      <style jsx>{`
+        .counter {
+          font-size: 2em;
+          color: #ff0000;
+        }
+      `}</style>
+      <div
+        className="counter"
+        style={{ border: '1px solid #ff0000' }}
+      >{`counter: ${likes}`}</div>
       <button
         className={
           'bg-indigo-700 font-semibold text-white py-2 px-4 rounded hover:bg-red-500'
@@ -30,7 +40,7 @@ const GoodCl = () => {
           data-rounded="rounded-lg"
         ></span>
       </a>
-      <button> Click </button>
+      <button className={styles.btn}> Click </button>
     </div>
   );
 };
